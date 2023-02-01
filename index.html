@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="curso"></div>
+
+<script src="cursos.js"></script>
+<script src="Persona.js"></script>
+<script>
+
+const div = document.getElementById("curso");
+
+
+curso.curso.forEach(element => {
+  
+   const persona = new Persona(element.nombre, element.apellido); 
+   if(element.hobbie){
+    console.log("indefinido");
+    persona.setHobbie(element.hobbie);
+
+   
+
+   }
+  
+
+   console.log(persona.nombrarInv());    
+   persona.nombre = "Pepito";
+   div.innerHTML +=  persona.nombrarInv();
+   div.innerHTML += " " + persona.getHobbie() + "<br>"; 
+});
+
+    
+
+
+
+
+</script>
+
+    
+</body>
+</html>
